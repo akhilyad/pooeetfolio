@@ -22,7 +22,7 @@ export interface Project {
   name: string;
   description: string;
   tech: string[];
-  url?: string;href
+  url?: string;
 }
 
 export interface SkillCategory {
@@ -38,7 +38,8 @@ export const personalInfo: PersonalInfo = {
   phone: "+4917672678553",
   linkedIn: "https://linkedin.com/in/akhilyad",
   summary:
-    "Controls Engineer with 5 years  of expeirence in strategic procurement and EPC of Offshore Oil & Gas, Offshore Wind and Solar plants. Delivered USD 250M offshore EPC and managed a 350 MWp solar portfolio. Core expertise spans ABB 800xA DCS migrations and SCADA/HMI design, augmented by strategic PyPSA energy system modeling.",
+    "Automation and Controls Engineer with 5+ years delivering EPC projects in regulated environments. Served as Design Authority for a USD 250M offshore EPC and a 350 MWp solar portfolio, driving OEM and in-house teams to zero open items at handover. Core expertise spans ABB 800xA DCS migrations and SCADA/HMI design, augmented by strategic PyPSA energy system modeling.",
+  available: "Available immediately · Open to relocation",
 };
 
 export const experience: Experience[] = [
