@@ -1,7 +1,7 @@
 "use client"
 
 import { NavBar } from "@/components/ui/tubelight-navbar"
-import { Briefcase, GraduationCap, FolderOpen, Wrench, Mail } from "lucide-react"
+import { Briefcase, GraduationCap, FolderOpen, Wrench } from "lucide-react"
 
 export function TopNavigation() {
   const navItems = [
@@ -9,7 +9,6 @@ export function TopNavigation() {
     { name: "Education", url: "#education", icon: GraduationCap },
     { name: "Projects", url: "#projects", icon: FolderOpen },
     { name: "Skills", url: "#skills", icon: Wrench },
-    { name: "Contact", url: "#contact", icon: Mail },
   ]
 
   return <NavBar items={navItems} />
