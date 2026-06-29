@@ -1,35 +1,8 @@
-"use client";
-
-import { LiquidButton } from "@/components/ui/liquid-button";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { LocationMap } from "@/components/ui/expand-map";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { personalInfo } from "@/lib/data";
-import { Mail, Linkedin, FileText } from "lucide-react";
-
-export function Hero() {
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-
-  const springConfig = { stiffness: 50, damping: 20 };
-  const smoothX = useSpring(mouseX, springConfig);
-  const smoothY = useSpring(mouseY, springConfig);
-
-  const contentX = useTransform(smoothX, [0, 1], [-12, 12]);
-  const contentY = useTransform(smoothY, [0, 1], [-12, 12]);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    mouseX.set(clientX / innerWidth);
-    mouseY.set(clientY / innerHeight);
-  };
-
   return (
-    <AuroraBackground className="h-auto min-h-[calc(100vh-4rem)]">
+    <AuroraBackground className="h-auto min-h-0">
       <section
         onMouseMove={handleMouseMove}
-        className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-center overflow-hidden px-4 pt-8 pb-16 sm:px-6 md:px-12 lg:px-24"
+        className="relative flex flex-col justify-center overflow-hidden px-4 pt-8 pb-12 sm:px-6 md:px-12 lg:px-24"
       >
         <motion.div
           style={{ x: contentX, y: contentY, perspective: 1200 }}
@@ -91,7 +64,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1 }}
-              className="mt-10"
+              className="mt-8"
             >
               <LocationMap
                 location="Berlin, Germany"
@@ -99,11 +72,8 @@ export function Hero() {
                 className="w-[200px] sm:w-[240px]"
               />
             </motion.div>
-          </motion.div>  {/* ← THIS WAS MISSING */}
-
-          
+          </motion.div>
         </motion.div>
       </section>
     </AuroraBackground>
   );
-}
