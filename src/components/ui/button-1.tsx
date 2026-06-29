@@ -1,5 +1,5 @@
 'use client';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 
 type ColorKey =

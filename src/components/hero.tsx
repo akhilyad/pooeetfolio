@@ -4,7 +4,6 @@ import { LiquidButton } from "@/components/ui/liquid-button";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/lib/data";
 import { Mail, Linkedin, FileText, MapPin, ArrowRight } from "lucide-react";
-import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
 export function Hero() {
   const mouseX = useMotionValue(0.5);
