@@ -2,7 +2,7 @@
 
 import { GlassButton } from "@/components/ui/apple-tahoe-liquid-glass-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { LocationMap } from "@/components/ui/expand-map";
+import { LocationTag } from "@/components/ui/location-tag";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/lib/data";
 import { Mail, Linkedin, FileText } from "lucide-react";
@@ -101,10 +101,11 @@ export function Hero() {
               transition={{ delay: 1.1 }}
               className="mt-6 sm:mt-8"
             >
-              <LocationMap
-                location="Berlin, Germany"
-                coordinates="52.5200° N, 13.4050° E"
-                className="w-[180px] sm:w-[220px] md:w-[240px]"
+              <LocationTag
+                city="Berlin"
+                country="Germany"
+                timezone="CET"
+                ianaTimeZone="Europe/Berlin"
               />
             </motion.div>
           </motion.div>
