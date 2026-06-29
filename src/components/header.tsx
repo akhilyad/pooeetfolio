@@ -23,7 +23,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="h-4" /> {/* Spacer for Tubelight navbar */}
+      <div className="h-4 w-full" />
     </motion.header>
   );
 }

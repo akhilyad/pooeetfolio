@@ -26,10 +26,10 @@ export function Hero() {
   };
 
   return (
-    <AuroraBackground className="h-auto min-h-0">
+    <AuroraBackground className="h-auto min-h-0 overflow-x-hidden">
       <section
         onMouseMove={handleMouseMove}
-        className="relative flex flex-col justify-center overflow-hidden px-4 pt-20 pb-10 sm:pt-24 sm:pb-12 md:px-12 lg:px-24"
+        className="relative flex flex-col justify-center overflow-hidden px-5 sm:px-6 md:px-12 lg:px-24 pt-20 pb-10 sm:pt-24 sm:pb-12"
       >
         <motion.div
           style={{ x: contentX, y: contentY, perspective: 1200 }}
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -40, rotateY: -10 }}
               animate={{ opacity: 1, x: 0, rotateY: 0 }}
               transition={{ delay: 0.4, duration: 0.7, type: "spring", stiffness: 70 }}
-              className="mt-4 sm:mt-5 font-semibold text-slate-700 whitespace-nowrap text-[clamp(11px,2.2vw,26px)] tracking-tight"
+              className="mt-4 sm:mt-5 font-semibold text-slate-700 text-[clamp(11px,2.2vw,26px)] tracking-tight overflow-hidden text-ellipsis"
               style={{ transformStyle: "preserve-3d" }}
             >
               {personalInfo.title}
@@ -59,7 +59,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30, rotateX: 10 }}
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{ delay: 0.8, duration: 0.6, type: "spring", stiffness: 60 }}
-              className="mt-5 sm:mt-6 flex flex-wrap gap-4 sm:gap-5 items-center"
+              className="mt-5 sm:mt-6 flex flex-wrap gap-3 sm:gap-4 md:gap-5 items-center"
             >
               <a href={`mailto:${personalInfo.email}`} className="no-underline">
                 <LiquidButton icon={<Mail className="h-4 w-4" />}>
@@ -70,7 +70,7 @@ export function Hero() {
               <a
                 href="/Akhil_Yadav_ABB_ProjectLeadEngineer.pdf"
                 download
-                className="inline-flex items-center gap-2.5 rounded-full border border-white/40 bg-white/20 backdrop-blur-xl px-6 py-3 sm:px-7 sm:py-3.5 text-sm font-bold text-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.4)] hover:bg-white/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.5)] transition-all no-underline cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 backdrop-blur-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 text-sm font-bold text-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.4)] hover:bg-white/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.5)] transition-all no-underline cursor-pointer"
               >
                 <FileText className="h-5 w-5" />
                 <span className="whitespace-nowrap">View Résumé</span>
@@ -80,7 +80,7 @@ export function Hero() {
                 href={personalInfo.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-full border border-white/40 bg-white/20 backdrop-blur-xl px-6 py-3 sm:px-7 sm:py-3.5 text-sm font-bold text-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.4)] hover:bg-white/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.5)] transition-all no-underline cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/20 backdrop-blur-xl px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 text-sm font-bold text-slate-800 shadow-[0_4px_24px_rgba(0,0,0,0.08),inset_0_1px_0_rgba(255,255,255,0.4)] hover:bg-white/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.5)] transition-all no-underline cursor-pointer"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="whitespace-nowrap">LinkedIn</span>
