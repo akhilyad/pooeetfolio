@@ -75,20 +75,10 @@ export function Hero() {
             </motion.h2>
 
             <motion.div
-              initial={{ opacity: 0, y: 20, rotateX: 5 }}
-              animate={{ opacity: 1, y: 0, rotateX: 0 }}
-              transition={{ delay: 0.5, duration: 0.6, type: "spring", stiffness: 60 }}
-              className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600 space-y-4 mt-8"
-            >
-              <p><strong>System Architecture:</strong> Migrated 45+ legacy control systems to ABB 800xA; C to IEC 61131-3 ST; MTBF up 43%.</p>
-              <p><strong>Project Management:</strong> Led FAT/SATs across 8 Tier-1 OEMs for Qatar Energy's $250M offshore Telemetry EPC, achieved 98% uptime.</p>
-            </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, y: 30, rotateX: 10 }}
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{ delay: 0.8, duration: 0.6, type: "spring", stiffness: 60 }}
-              className="mt-12 flex flex-wrap gap-5 items-center"
+              className="mt-6 flex flex-wrap gap-5 items-center"
             >
               <a href={`mailto:${personalInfo.email}`} className="no-underline">
                 <LiquidButton icon={<Mail className="h-4 w-4" />}>
