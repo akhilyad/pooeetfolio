@@ -1,11 +1,16 @@
 import type { Config } from "tailwindcss";
-import { default: flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 const config: Config = {
-  // ... existing config
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
-      // ... existing extends
       animation: {
         aurora: "aurora 60s linear infinite",
       },
@@ -21,10 +26,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    // ... existing plugins
-    addVariablesForColors,
-  ],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
@@ -32,7 +34,6 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
   addBase({
     ":root": newVars,
   });
