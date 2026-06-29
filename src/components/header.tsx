@@ -40,7 +40,10 @@ export function Header() {
         <nav className="hidden md:flex md:gap-3">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="no-underline">
-              <LiquidButton size="sm" className="text-slate-700 hover:text-emerald-700 font-medium text-xs">
+              <LiquidButton 
+                size="default" 
+                className="text-slate-700 hover:text-emerald-700 font-semibold text-sm whitespace-nowrap px-5 py-2.5"
+              >
                 {link.label}
               </LiquidButton>
             </a>

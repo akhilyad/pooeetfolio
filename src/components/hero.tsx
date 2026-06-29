@@ -106,23 +106,32 @@ export function Hero() {
           className="mt-12 flex flex-wrap gap-4"
         >
           <a href={`mailto:${personalInfo.email}`} className="no-underline">
-            <LiquidButton size="lg" className="bg-emerald-700 text-white hover:bg-emerald-800 font-bold">
-              <Mail className="h-4 w-4" />
+            <LiquidButton 
+              size="lg" 
+              className="bg-emerald-700 text-white hover:bg-emerald-800 font-bold whitespace-nowrap px-8 py-4 text-base"
+            >
+              <Mail className="h-5 w-5" />
               Contact
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-5 w-5" />
             </LiquidButton>
           </a>
 
           <a href="/Akhil_Yadav_ABB_ProjectLeadEngineer.pdf" download className="no-underline">
-            <LiquidButton size="lg" className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold">
-              <FileText className="h-4 w-4" />
+            <LiquidButton 
+              size="lg" 
+              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-8 py-4 text-base"
+            >
+              <FileText className="h-5 w-5" />
               View Résumé
             </LiquidButton>
           </a>
 
           <a href={personalInfo.linkedIn} target="_blank" rel="noopener noreferrer" className="no-underline">
-            <LiquidButton size="lg" className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold">
-              <Linkedin className="h-4 w-4" />
+            <LiquidButton 
+              size="lg" 
+              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-8 py-4 text-base"
+            >
+              <Linkedin className="h-5 w-5" />
               LinkedIn
             </LiquidButton>
           </a>
