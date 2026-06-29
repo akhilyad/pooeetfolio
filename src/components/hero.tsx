@@ -5,7 +5,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { LocationMap } from "@/components/ui/expand-map";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/lib/data";
-import { Mail, Linkedin, FileText, MapPin } from "lucide-react";
+import { Mail, Linkedin, FileText } from "lucide-react";
 
 export function Hero() {
   const mouseX = useMotionValue(0.5);
@@ -15,8 +15,6 @@ export function Hero() {
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
-  const orbX = useTransform(smoothX, [0, 1], [-40, 40]);
-  const orbY = useTransform(smoothY, [0, 1], [-40, 40]);
   const contentX = useTransform(smoothX, [0, 1], [-12, 12]);
   const contentY = useTransform(smoothY, [0, 1], [-12, 12]);
 
@@ -33,7 +31,6 @@ export function Hero() {
         onMouseMove={handleMouseMove}
         className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-center overflow-hidden px-4 pt-8 pb-16 sm:px-6 md:px-12 lg:px-24"
       >
-        
         <motion.div
           style={{ x: contentX, y: contentY, perspective: 1200 }}
           className="mx-auto w-full max-w-5xl"
@@ -102,7 +99,7 @@ export function Hero() {
                 className="w-[200px] sm:w-[240px]"
               />
             </motion.div>
-      
+          </motion.div>  {/* ← THIS WAS MISSING */}
 
           <motion.div
             animate={{ y: [0, 12, 0] }}
