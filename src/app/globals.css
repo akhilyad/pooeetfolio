@@ -13,3 +13,28 @@
     @apply bg-white text-slate-900 antialiased;
   }
 }
+
+/* Dock neighbor scaling effect */
+.dock-icon:hover + .dock-icon {
+  width: calc(var(--icon-size) * 1.33);
+  height: calc(var(--icon-size) * 1.33);
+  margin-top: calc(var(--icon-size) * -0.33);
+}
+
+.dock-icon:hover + .dock-icon + .dock-icon {
+  width: calc(var(--icon-size) * 1.17);
+  height: calc(var(--icon-size) * 1.17);
+  margin-top: calc(var(--icon-size) * -0.17);
+}
+
+.dock-icon:has(+ .dock-icon:hover) {
+  width: calc(var(--icon-size) * 1.33);
+  height: calc(var(--icon-size) * 1.33);
+  margin-top: calc(var(--icon-size) * -0.33);
+}
+
+.dock-icon:has(+ .dock-icon + .dock-icon:hover) {
+  width: calc(var(--icon-size) * 1.17);
+  height: calc(var(--icon-size) * 1.17);
+  margin-top: calc(var(--icon-size) * -0.17);
+}
