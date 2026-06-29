@@ -4,6 +4,7 @@ import { LiquidButton } from "@/components/ui/liquid-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/lib/data";
+import { LocationMap } from "@/components/ui/expand-map";
 import { Mail, Linkedin, FileText, MapPin, ArrowRight } from "lucide-react";
 
 export function Hero() {
@@ -93,14 +94,15 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.1 }}
-              className="mt-10 flex items-center gap-2 text-sm text-slate-500"
+              className="mt-10"
             >
-              <MapPin className="h-4 w-4" />
-              <span>{personalInfo.location}</span>
-              <span className="mx-2">·</span>
-              <span>{personalInfo.email}</span>
+              <LocationMap
+                location="Berlin, Germany"
+                coordinates="52.5200° N, 13.4050° E"
+                className="w-[200px] sm:w-[240px]"
+              />
             </motion.div>
-          </motion.div>
+      
 
           <motion.div
             animate={{ y: [0, 12, 0] }}
