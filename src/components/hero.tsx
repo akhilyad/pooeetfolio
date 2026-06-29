@@ -108,31 +108,31 @@ export function Hero() {
           <a href={`mailto:${personalInfo.email}`} className="no-underline">
             <LiquidButton 
               size="lg" 
-              className="bg-emerald-700 text-white hover:bg-emerald-800 font-bold whitespace-nowrap px-8 py-4 text-base"
+              className="bg-emerald-700 text-white hover:bg-emerald-800 font-bold whitespace-nowrap px-6 py-3.5 text-sm md:text-base min-w-[140px]"
             >
-              <Mail className="h-5 w-5" />
-              Contact
-              <ArrowRight className="h-5 w-5" />
+              <Mail className="h-5 w-5 shrink-0" />
+              <span className="whitespace-nowrap">Contact</span>
+              <ArrowRight className="h-5 w-5 shrink-0" />
             </LiquidButton>
           </a>
 
           <a href="/Akhil_Yadav_ABB_ProjectLeadEngineer.pdf" download className="no-underline">
             <LiquidButton 
               size="lg" 
-              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-8 py-4 text-base"
+              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-6 py-3.5 text-sm md:text-base min-w-[160px]"
             >
-              <FileText className="h-5 w-5" />
-              View Résumé
+              <FileText className="h-5 w-5 shrink-0" />
+              <span className="whitespace-nowrap">View Résumé</span>
             </LiquidButton>
           </a>
 
           <a href={personalInfo.linkedIn} target="_blank" rel="noopener noreferrer" className="no-underline">
             <LiquidButton 
               size="lg" 
-              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-8 py-4 text-base"
+              className="border-2 border-slate-200 text-slate-800 hover:bg-slate-50 font-bold whitespace-nowrap px-6 py-3.5 text-sm md:text-base min-w-[140px]"
             >
-              <Linkedin className="h-5 w-5" />
-              LinkedIn
+              <Linkedin className="h-5 w-5 shrink-0" />
+              <span className="whitespace-nowrap">LinkedIn</span>
             </LiquidButton>
           </a>
         </motion.div>
