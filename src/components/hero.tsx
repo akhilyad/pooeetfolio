@@ -2,10 +2,10 @@
 
 import { LiquidButton } from "@/components/ui/liquid-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { LocationMap } from "@/components/ui/expand-map";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { personalInfo } from "@/lib/data";
-import { LocationMap } from "@/components/ui/expand-map";
-import { Mail, Linkedin, FileText, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Linkedin, FileText, MapPin } from "lucide-react";
 
 export function Hero() {
   const mouseX = useMotionValue(0.5);
