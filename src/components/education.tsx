@@ -6,27 +6,23 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 const education = [
   {
-    degree: "MBA in Engineering Management",
-    institution: "Technical University of Berlin (TU Berlin)",
+    degree: "MBA, Energy Management",
+    institution: "Technische Universität Berlin (TU Berlin)",
     location: "Berlin, Germany",
-    dates: "2024 – 2026",
-    highlights: ["Operations Strategy", "Supply Chain Optimization", "Project Finance", "Digital Transformation"],
+    dates: "Oct 2024 – Present",
+    thesis:
+      "Thesis: green hydrogen cost modelling across 9 countries (PyPSA, 8,760 hourly dispatch steps) — a 1% rise in financing cost (WACC) cancels a 10% gain in renewable output.",
+    highlights: ["Project Management", "Strategic Management", "Supply Chain Management", "PyPSA Modelling"],
     glowColor: "blue" as const,
   },
   {
-    degree: "M.Tech in Control Systems",
-    institution: "Indian Institute of Technology (IIT)",
+    degree: "B.Tech, Electronics & Instrumentation Engineering",
+    institution: "Amrita Vishwa Vidyapeetham",
     location: "India",
-    dates: "2018 – 2020",
-    highlights: ["Model Predictive Control", "Process Automation", "System Identification", "Nonlinear Dynamics"],
-    glowColor: "purple" as const,
-  },
-  {
-    degree: "B.Tech in Electrical Engineering",
-    institution: "National Institute of Technology (NIT)",
-    location: "India",
-    dates: "2014 – 2018",
-    highlights: ["Power Electronics", "Control Theory", "Signal Processing", "Instrumentation"],
+    dates: "Jul 2016 – Aug 2020",
+    thesis:
+      "Thesis: deep-learning fault detection for satellite power systems (PCA + DNN on NASA ADAPT data, 99.75% accuracy). Published — Springer Singapore, 2020.",
+    highlights: ["Electronics", "Instrumentation", "PCA + DNN", "Springer Publication"],
     glowColor: "green" as const,
   },
 ];
@@ -45,7 +41,7 @@ export function Education() {
         <div className="mt-2 h-1 w-20 rounded-full bg-violet-500" />
       </motion.div>
 
-      <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto">
         {education.map((edu, index) => (
           <motion.div
             key={edu.degree}
@@ -74,7 +70,7 @@ export function Education() {
                   {edu.institution}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-3 mb-4 text-xs text-slate-500">
+                <div className="flex flex-wrap items-center gap-3 mb-3 text-xs text-slate-500">
                   <span className="flex items-center gap-1">
                     <Calendar className="h-3 w-3" />
                     {edu.dates}
@@ -84,6 +80,10 @@ export function Education() {
                     {edu.location}
                   </span>
                 </div>
+
+                <p className="text-xs leading-relaxed text-slate-500 mb-4">
+                  {edu.thesis}
+                </p>
 
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
                   {edu.highlights.map((highlight) => (

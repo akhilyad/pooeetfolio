@@ -1,6 +1,6 @@
 "use client";
 
-import { LiquidButton } from "@/components/ui/liquid-button";
+import { GlassButton } from "@/components/ui/apple-tahoe-liquid-glass-button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { LocationMap } from "@/components/ui/expand-map";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
@@ -62,9 +62,15 @@ export function Hero() {
               className="mt-5 sm:mt-6 flex flex-wrap gap-3 sm:gap-4 md:gap-5 items-center"
             >
               <a href={`mailto:${personalInfo.email}`} className="no-underline">
-                <LiquidButton icon={<Mail className="h-4 w-4" />}>
-                  Contact
-                </LiquidButton>
+                <GlassButton
+                  aria-label="Contact"
+                  glassColor="oklch(from var(--foreground) l c h / 8%)"
+                  className="px-5 py-2.5 sm:px-6 sm:py-3 md:px-7 md:py-3.5 text-sm font-bold rounded-full"
+                  contentClassName="gap-2"
+                >
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="whitespace-nowrap">Contact</span>
+                </GlassButton>
               </a>
 
               <a

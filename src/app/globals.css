@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Full color values consumed by the liquid-glass button's relative-color
+       (oklch(from var(--foreground) ...)) and text-shadow declarations. */
+    --background: #ffffff;
+    --foreground: #0f172a; /* slate-900 */
+  }
   html {
     scroll-behavior: smooth;
   }
