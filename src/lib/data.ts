@@ -32,7 +32,7 @@ export interface SkillCategory {
 
 export const personalInfo: PersonalInfo = {
   name: "Akhil Yadav",
-  title: "Controls Design Engineer | EPMS and BMS | IEC 61511 | Data Centers",
+  title: "Controls Engineer | EPMS and BMS | IEC 61511 | Data Centers",
   location: "Berlin, Germany",
   email: "akhil20698@gmail.com",
   phone: "+4917672678553",

@@ -9,7 +9,7 @@ const education = [
     degree: "MBA, Energy Management",
     institution: "Technische Universität Berlin (TU Berlin)",
     location: "Berlin, Germany",
-    dates: "Oct 2024 – Present",
+    dates: "Oct 2024",
     thesis:
       "Thesis: green hydrogen cost modelling across 9 countries (PyPSA, 8,760 hourly dispatch steps) — a 1% rise in financing cost (WACC) cancels a 10% gain in renewable output.",
     highlights: ["Project Management", "Strategic Management", "Supply Chain Management", "PyPSA Modelling"],
@@ -19,7 +19,7 @@ const education = [
     degree: "B.Tech, Electronics & Instrumentation Engineering",
     institution: "Amrita Vishwa Vidyapeetham",
     location: "India",
-    dates: "Jul 2016 – Aug 2020",
+    dates: "Jun 2016",
     thesis:
       "Thesis: deep-learning fault detection for satellite power systems (PCA + DNN on NASA ADAPT data, 99.75% accuracy). Published — Springer Singapore, 2020.",
     highlights: ["Electronics", "Instrumentation", "PCA + DNN", "Springer Publication"],
